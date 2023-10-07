@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "@cli-jsnote-sol/local-client/src/App";
+import App from "./App";
 import { Provider } from "react-redux";
-import { store } from "@cli-jsnote-sol/local-client/src/state";
+import { store } from './state/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
