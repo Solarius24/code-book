@@ -1,12 +1,12 @@
-import '@cli-jsnote-sol/local-client/src/components/add-cell.css';
-import { useActions } from '@cli-jsnote-sol/local-client/src/hooks/use-actions';
+import './add-cell.css';
+import { useActions } from '../hooks/use-actions';
 
 interface AddCellProps {
   previousCellId: string | null;
   forceVisible?: boolean;
 }
 
-const AddCell= ({ forceVisible, previousCellId }:AddCellProps) => {
+const AddCell: React.FC<AddCellProps> = ({ forceVisible, previousCellId }) => {
   const { insertCellAfter } = useActions();
 
   return (

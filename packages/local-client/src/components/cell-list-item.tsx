@@ -1,8 +1,8 @@
-import '@cli-jsnote-sol/local-client/src/components/cell-list-item.css';
-import { Cell } from '@cli-jsnote-sol/local-client/src/state';
-import CodeCell from '@cli-jsnote-sol/local-client/src/components/code-cell';
-import TextEditor from '@cli-jsnote-sol/local-client/src/components/text-editor';
-import ActionBar from '@cli-jsnote-sol/local-client/src/components/action-bar';
+import './cell-list-item.css';
+import { Cell } from '../state';
+import CodeCell from './code-cell';
+import TextEditor from './text-editor';
+import ActionBar from './action-bar';
 
 interface CellListItemProps {
   cell: Cell;

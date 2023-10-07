@@ -1,5 +1,4 @@
-import {TypedUseSelectorHook} from "react-redux"
-import { RootState } from "@cli-jsnote-sol/local-client/src/state";
-import { useSelector } from "react-redux";
+import { useSelector, TypedUseSelectorHook } from 'react-redux';
+import { RootState } from '../state';
 
-export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector
+export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;

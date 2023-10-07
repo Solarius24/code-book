@@ -1,9 +1,9 @@
-import "@cli-jsnote-sol/local-client/src/components/cell-list.css";
-import { Fragment, useEffect } from "react";
-import { useTypedSelector } from "@cli-jsnote-sol/local-client/src/hooks/use-typed-selector";
-import CellListItem from "@cli-jsnote-sol/local-client/src/components/cell-list-item";
-import AddCell from "@cli-jsnote-sol/local-client/src/components/add-cell";
-import { useActions } from "@cli-jsnote-sol/local-client/src/hooks/use-actions";
+import './cell-list.css';
+import { Fragment, useEffect } from 'react';
+import { useTypedSelector } from '../hooks/use-typed-selector';
+import CellListItem from './cell-list-item';
+import AddCell from './add-cell';
+import { useActions } from '../hooks/use-actions';
 
 const CellList: React.FC = () => {
   const cells = useTypedSelector(({ cells: { order, data } }) =>

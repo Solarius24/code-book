@@ -1,17 +1,17 @@
-import { ActionType } from "@cli-jsnote-sol/local-client/src/state/action-types";
-import axios from "axios";
-import { Dispatch } from "redux";
+import { Dispatch } from 'redux';
+import axios from 'axios';
+import { ActionType } from '../action-types';
 import {
-  Action,
-  MoveCellAction,
-  DeleteCellAction,
-  InsertCellAfterAction,
   UpdateCellAction,
+  DeleteCellAction,
+  MoveCellAction,
+  InsertCellAfterAction,
   Direction,
-} from "@cli-jsnote-sol/local-client/src/state/actions";
-import { Cell, CellTypes } from "@cli-jsnote-sol/local-client/src/state/cell";
-import bundle from "@cli-jsnote-sol/local-client/src/bundler";
-import { RootState } from "@cli-jsnote-sol/local-client/src/state/reducers";
+  Action,
+} from '../actions';
+import { Cell, CellTypes } from '../cell';
+import bundle from '../../bundler';
+import { RootState } from '../reducers';
 
 export const updateCell = (id: string, content: string): UpdateCellAction => {
   return {
@@ -61,7 +61,9 @@ export const createBundle = (cellId: string, input: string) => {
         cellId,
       },
     });
+
     const result = await bundle(input);
+
     dispatch({
       type: ActionType.BUNDLE_COMPLETE,
       payload: {
@@ -77,15 +79,17 @@ export const fetchCells = () => {
     dispatch({ type: ActionType.FETCH_CELLS });
 
     try {
-      const { data }: { data: Cell[] } = await axios.get("/cells");
-      dispatch({ type: ActionType.FETCH_CELLS_COMPLETE, payload: data });
+      const { data }: { data: Cell[] } = await axios.get('/cells');
+
+      dispatch({
+        type: ActionType.FETCH_CELLS_COMPLETE,
+        payload: data,
+      });
     } catch (err) {
-      if (err instanceof Error) {
-        dispatch({
-          type: ActionType.FETCH_CELLS_ERROR,
-          payload: err.message,
-        });
-      }
+      dispatch({
+        type: ActionType.FETCH_CELLS_ERROR,
+        payload: err.message,
+      });
     }
   };
 };
@@ -99,14 +103,12 @@ export const saveCells = () => {
     const cells = order.map((id) => data[id]);
 
     try {
-      await axios.post("/cells", { cells });
+      await axios.post('/cells', { cells });
     } catch (err) {
-      if (err instanceof Error) {
-        dispatch({
-          type: ActionType.SAVE_CELLS_ERROR,
-          payload: err.message,
-        });
-      }
+      dispatch({
+        type: ActionType.SAVE_CELLS_ERROR,
+        payload: err.message,
+      });
     }
   };
 };

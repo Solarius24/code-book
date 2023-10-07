@@ -1,7 +1,7 @@
-import { useDispatch } from "react-redux";
-import { bindActionCreators } from "redux";
-import { actionCreators } from "@cli-jsnote-sol/local-client/src/state";
-import { useMemo } from "react";
+import { useMemo } from 'react';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from '../state';
 
 export const useActions = () => {
   const dispatch = useDispatch();

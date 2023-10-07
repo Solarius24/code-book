@@ -1,8 +1,8 @@
 import { Dispatch } from 'redux';
-import { Action } from '@cli-jsnote-sol/local-client/src/state/actions';
-import { ActionType } from '@cli-jsnote-sol/local-client/src/state/action-types';
-import { saveCells } from '@cli-jsnote-sol/local-client/src/state/action-creators';
-import { RootState } from '@cli-jsnote-sol/local-client/src/state/reducers';
+import { Action } from '../actions';
+import { ActionType } from '../action-types';
+import { saveCells } from '../action-creators';
+import { RootState } from '../reducers';
 
 export const persistMiddlware = ({
   dispatch,
