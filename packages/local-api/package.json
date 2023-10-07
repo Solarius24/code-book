@@ -1,6 +1,6 @@
 {
   "name": "@cli-jsnote-sol/local-api",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "description": "",
   "publishConfig": {
     "access": "public"
@@ -23,7 +23,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@cli-jsnote-sol/local-client": "^10.0.0",
+    "@cli-jsnote-sol/local-client": "^11.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6"
