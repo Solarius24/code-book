@@ -1,5 +1,5 @@
 {
-  "name": "cli-jsnote-solarius",
+  "name": "cli-jsnote-sol",
   "version": "4.0.0",
   "description": "",
   "bin": "dist/index.js",
@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cli-jsnote-solarius/local-client": "^4.0.0"
+    "@cli-jsnote-sol/local-client": "^4.0.0"
   },
   "devDependencies": {
     "@cli-jsnote/local-api": "^3.0.0",
@@ -26,5 +26,5 @@
     "esbuild": "0.8.26",
     "typescript": "^5.2.2"
   },
-  "gitHead": "5efa1a98cce6bee7baa62fa2f857c5a3b1790982"
+  "gitHead": "98a2fa895a045f044bf27d42380f8f8a0d58a8ef"
 }

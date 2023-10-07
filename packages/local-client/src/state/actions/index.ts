@@ -1,5 +1,5 @@
-import { ActionType } from "../action-types";
-import { Cell, CellTypes } from "../cell";
+import { ActionType } from "@cli-jsnote-sol/local-client/src/state/action-types";
+import { Cell, CellTypes } from "@cli-jsnote-sol/local-client/src/state/cell";
 
 export type Direction = "up" | "down";
 export interface MoveCellAction {

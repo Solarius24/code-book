@@ -1,5 +1,5 @@
-import './code-editor.css';
-import './syntax.css';
+import '@cli-jsnote-sol/local-client/src/components/code-editor.css';
+import '@cli-jsnote-sol/local-client/src/components/syntax.css';
 import { useRef } from 'react';
 import MonacoEditor, { EditorDidMount } from '@monaco-editor/react';
 import prettier from 'prettier';

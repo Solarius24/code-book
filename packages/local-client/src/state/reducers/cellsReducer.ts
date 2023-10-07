@@ -1,7 +1,7 @@
 import produce from "immer";
-import { ActionType } from "../action-types";
-import { Action } from "../actions";
-import { Cell } from "../cell";
+import { ActionType } from "@cli-jsnote-sol/local-client/src/state/action-types";
+import { Action } from "@cli-jsnote-sol/local-client/src/state/actions";
+import { Cell } from "@cli-jsnote-sol/local-client/src/state/cell";
 
 interface CellsState {
   loading: boolean;

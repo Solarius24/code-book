@@ -1,6 +1,6 @@
 import produce from "immer";
-import { ActionType } from "../action-types";
-import { Action } from "../actions";
+import { ActionType } from "@cli-jsnote-sol/local-client/src/state/action-types";
+import { Action } from "@cli-jsnote-sol/local-client/src/state/actions";
 
 interface BundlesState {
   [key: string]: {

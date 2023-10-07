@@ -1,5 +1,5 @@
 {
-  "name": "@cli-jsnote-solarius/local-api",
+  "name": "@cli-jsnote-sol/local-api",
   "version": "4.0.0",
   "description": "",
   "publishConfig": {
@@ -23,10 +23,10 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@cli-jsnote-solarius/local-client": "^4.0.0",
+    "@cli-jsnote-sol/local-client": "^4.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6"
   },
-  "gitHead": "5efa1a98cce6bee7baa62fa2f857c5a3b1790982"
+  "gitHead": "98a2fa895a045f044bf27d42380f8f8a0d58a8ef"
 }

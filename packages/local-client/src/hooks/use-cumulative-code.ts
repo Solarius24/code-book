@@ -1,4 +1,4 @@
-import { useTypedSelector } from './use-typed-selector';
+import { useTypedSelector } from '@cli-jsnote-sol/local-client/src/hooks/use-typed-selector';
 
 export const useCumulativeCode = (cellId: string) => {
   return useTypedSelector((state) => {

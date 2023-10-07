@@ -1,4 +1,4 @@
-import { ActionType } from "../action-types";
+import { ActionType } from "@cli-jsnote-sol/local-client/src/state/action-types";
 import axios from "axios";
 import { Dispatch } from "redux";
 import {
@@ -8,10 +8,10 @@ import {
   InsertCellAfterAction,
   UpdateCellAction,
   Direction,
-} from "../actions";
-import { Cell, CellTypes } from "../cell";
-import bundle from "../../bundler";
-import { RootState } from "../reducers";
+} from "@cli-jsnote-sol/local-client/src/state/actions";
+import { Cell, CellTypes } from "@cli-jsnote-sol/local-client/src/state/cell";
+import bundle from "@cli-jsnote-sol/local-client/src/bundler";
+import { RootState } from "@cli-jsnote-sol/local-client/src/state/reducers";
 
 export const updateCell = (id: string, content: string): UpdateCellAction => {
   return {

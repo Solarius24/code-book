@@ -1,6 +1,6 @@
 import * as esbuild from "esbuild-wasm";
-import { unpkgPathPlugin } from "./plugins/unpkg-path-plugin";
-import { fetchPlugin } from "./plugins/fetch-plugin";
+import { unpkgPathPlugin } from "@cli-jsnote-sol/local-client/src/bundler/plugins/unpkg-path-plugin";
+import { fetchPlugin } from "@cli-jsnote-sol/local-client/src/bundler/plugins/fetch-plugin";
 
 let service: esbuild.Service;
 const bundle = async (rawCode: string) => {

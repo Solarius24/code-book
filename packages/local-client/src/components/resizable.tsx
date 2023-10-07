@@ -1,4 +1,4 @@
-import './resizable.css';
+import '@cli-jsnote-sol/local-client/src/components/resizable.css';
 import { ResizableBox, ResizableBoxProps } from 'react-resizable';
 
 interface ResizableProps {

@@ -1,6 +1,6 @@
 import path from "path";
 import { Command } from "commander";
-import { serve } from "@cli-jsnote-solarius/local-api";
+import {serve} from "@cli-jsnote-sol/local-api"
 
 interface LocalApiError {
   code: string;

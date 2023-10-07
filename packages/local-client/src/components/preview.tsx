@@ -1,4 +1,4 @@
-import "./preview.css";
+import "@cli-jsnote-sol/local-client/src/components/preview.css";
 import { useRef, useEffect } from "react";
 
 interface PreviewProps {

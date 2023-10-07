@@ -1,12 +1,12 @@
-import './code-cell.css';
+import '@cli-jsnote-sol/local-client/src/components/code-cell.css';
 import { useEffect } from 'react';
-import CodeEditor from './code-editor';
-import Preview from './preview';
-import Resizable from './resizable';
-import { Cell } from '../state';
-import { useActions } from '../hooks/use-actions';
-import { useTypedSelector } from '../hooks/use-typed-selector';
-import { useCumulativeCode } from '../hooks/use-cumulative-code';
+import CodeEditor from '@cli-jsnote-sol/local-client/src/components/code-editor';
+import Preview from '@cli-jsnote-sol/local-client/src/components/preview';
+import Resizable from '@cli-jsnote-sol/local-client/src/components/resizable';
+import { Cell } from '@cli-jsnote-sol/local-client/src/state';
+import { useActions } from '@cli-jsnote-sol/local-client/src/hooks/use-actions';
+import { useTypedSelector } from '@cli-jsnote-sol/local-client/src/hooks/use-typed-selector';
+import { useCumulativeCode } from '@cli-jsnote-sol/local-client/src/hooks/use-cumulative-code';
 
 interface CodeCellProps {
   cell: Cell;

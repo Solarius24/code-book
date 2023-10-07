@@ -1,5 +1,5 @@
-import './action-bar.css';
-import { useActions } from '../hooks/use-actions';
+import '@cli-jsnote-sol/local-client/src/components/action-bar.css';
+import { useActions } from '@cli-jsnote-sol/local-client/src/hooks/use-actions';
 
 interface ActionBarProps {
   id: string;
