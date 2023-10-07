@@ -1,5 +1,5 @@
 {
-  "name": "@cli-jsnote/local-client",
+  "name": "@cli-jsnote-solarius/local-client",
   "version": "3.0.0",
   "publishConfig": {
     "access": "public"
@@ -62,5 +62,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "gitHead": "5efa1a98cce6bee7baa62fa2f857c5a3b1790982"
 }
