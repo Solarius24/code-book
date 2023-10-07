@@ -61,9 +61,7 @@ export const createBundle = (cellId: string, input: string) => {
         cellId,
       },
     });
-
     const result = await bundle(input);
-
     dispatch({
       type: ActionType.BUNDLE_COMPLETE,
       payload: {
@@ -79,17 +77,15 @@ export const fetchCells = () => {
     dispatch({ type: ActionType.FETCH_CELLS });
 
     try {
-      const { data }: { data: Cell[] } = await axios.get('/cells');
-
-      dispatch({
-        type: ActionType.FETCH_CELLS_COMPLETE,
-        payload: data,
-      });
+      const { data }: { data: Cell[] } = await axios.get("/cells");
+      dispatch({ type: ActionType.FETCH_CELLS_COMPLETE, payload: data });
     } catch (err) {
-      dispatch({
-        type: ActionType.FETCH_CELLS_ERROR,
-        payload: err.message,
-      });
+      if (err instanceof Error) {
+        dispatch({
+          type: ActionType.FETCH_CELLS_ERROR,
+          payload: err.message,
+        });
+      }
     }
   };
 };
@@ -103,12 +99,14 @@ export const saveCells = () => {
     const cells = order.map((id) => data[id]);
 
     try {
-      await axios.post('/cells', { cells });
+      await axios.post("/cells", { cells });
     } catch (err) {
-      dispatch({
-        type: ActionType.SAVE_CELLS_ERROR,
-        payload: err.message,
-      });
+      if (err instanceof Error) {
+        dispatch({
+          type: ActionType.SAVE_CELLS_ERROR,
+          payload: err.message,
+        });
+      }
     }
   };
 };
