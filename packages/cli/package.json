@@ -1,6 +1,6 @@
 {
   "name": "cli-jsnote",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "",
   "bin": "dist/index.js",
   "publishConfig": {
@@ -17,10 +17,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cli-jsnote/local-client": "^2.0.0"
+    "@cli-jsnote/local-client": "^3.0.0"
   },
   "devDependencies": {
-    "@cli-jsnote/local-api": "^2.0.0",
+    "@cli-jsnote/local-api": "^3.0.0",
     "@types/node": "^20.8.3",
     "commander": "^11.0.0",
     "esbuild": "0.8.26",
