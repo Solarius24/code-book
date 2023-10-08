@@ -17,14 +17,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cli-jsnote-sol/local-api": "^12.0.0",
     "@cli-jsnote-sol/local-client": "^12.0.0"
   },
   "devDependencies": {
-    "@cli-jsnote/local-api": "^3.0.0",
+    "@cli-jsnote-sol/local-api": "^3.0.0",
     "@types/node": "^20.8.3",
     "commander": "^11.0.0",
     "esbuild": "0.8.26",
     "typescript": "^5.2.2"
   },
-  "gitHead": "e28b869c7bdb302b2366d352fb3bb18249f78a87"
+  "gitHead": "6ded89c37bbff90dbfe28043c2d3f94885467cd2"
 }

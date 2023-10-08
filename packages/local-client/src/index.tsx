@@ -1,18 +1,16 @@
-import 'bulmaswatch/superhero/bulmaswatch.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { store } from './state';
-import CellList from './components/cell-list';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { Provider } from "react-redux";
+import { store } from './state/store';
 
-const App = () => {
-  return (
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+root.render(
+  <React.StrictMode>
     <Provider store={store}>
-      <div>
-        <CellList />
-      </div>
+      <App />
     </Provider>
-  );
-};
-
-ReactDOM.render(<App />, document.querySelector('#root'));
+  </React.StrictMode>
+);
