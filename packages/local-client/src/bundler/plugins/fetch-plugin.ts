@@ -7,6 +7,7 @@ const fileCache = localForage.createInstance({
 });
 
 export const fetchPlugin = (inputCode: string) => {
+
   return {
     name: 'fetch-plugin',
     setup(build: esbuild.PluginBuild) {
@@ -14,8 +15,10 @@ export const fetchPlugin = (inputCode: string) => {
         return {
           loader: 'jsx',
           contents: inputCode,
+
         };
       });
+      console.log(inputCode)
 
       build.onLoad({ filter: /.*/ }, async (args: any) => {
         const cachedResult = await fileCache.getItem<esbuild.OnLoadResult>(
