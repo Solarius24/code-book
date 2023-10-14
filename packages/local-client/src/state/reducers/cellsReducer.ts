@@ -15,8 +15,9 @@ interface CellsState {
 const initialState: CellsState = {
   loading: false,
   error: null,
-  order: [],
-  data: {},
+  order: ["ztest01","ztest02",],
+  data: {"ztest01":{content:"import { useState } from \"react\";\r\nconst Counter = () => {\r\n    const [count, setCount] = useState(0)\r\n    return (\r\n        <div>\r\n            <button onClick={()=> setCount(count +1)}>Click</button>\r\n            <h3>Count: {count}</h3>\r\n        </div>\r\n    )\r\n}\r\nshow(Counter)",type:"code",id:"ztest01"},
+  "ztest02":{content:"const App = () => {\r\n    return (\r\n        <div>\r\n            <h3>App Says Hi</h3>\r\n            <i>Counter componenet will be rendered below...</i>\r\n            <hr></hr>\r\n            <Counter/>\r\n        </div>\r\n    )\r\n}\r\n\r\nshow(App)",type:"code",id:"ztest02"}}
 };
 
 const reducer = produce((state: CellsState = initialState, action: Action) => {
@@ -55,6 +56,7 @@ const reducer = produce((state: CellsState = initialState, action: Action) => {
 
       return state;
     case ActionType.MOVE_CELL:
+      console.log(state)
       const { direction } = action.payload;
       const index = state.order.findIndex((id) => id === action.payload.id);
       const targetIndex = direction === 'up' ? index - 1 : index + 1;
