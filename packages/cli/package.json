@@ -1,6 +1,6 @@
 {
   "name": "cli-jsnote-sol",
-  "version": "21.0.0",
+  "version": "22.0.0",
   "description": "",
   "bin": "dist/index.js",
   "publishConfig": {
@@ -17,8 +17,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cli-jsnote-sol/local-api": "^21.0.0",
-    "@cli-jsnote-sol/local-client": "^21.0.0"
+    "@cli-jsnote-sol/local-api": "^22.0.0",
+    "@cli-jsnote-sol/local-client": "^22.0.0"
   },
   "devDependencies": {
     "@cli-jsnote-sol/local-api": "^3.0.0",
